@@ -49,20 +49,19 @@ public class InscriptionTest {
      */
     @Test
     public void testInscription() throws Exception {
-        System.out.println("inscription");
         long nombreLigne = GestionEntity.getMaxId("membre");
-        System.out.println("nombre de ligne avant : "+nombreLigne );
-        String nom = "rakotoarisoa";
-        String prenom = "herinihaja";
-        String dateNaissance = "01-03-1996";
+        System.out.println("Nombre de ligne avant : "+nombreLigne );
+        String nom = "Rabe";
+        String prenom = "Jean";
+        String dateNaissance = "12-11-1987";
         String sexe = "h";
-        String mail = "lion@gmail.com";
-        String mdp1 = "lion";
-        String mdp2 = "lion";
+        String mail = "jean@gmail.com";
+        String mdp1 = "jean";
+        String mdp2 = "jean";
         Inscription.inscription(nom, prenom, dateNaissance, sexe, mail, mdp1, mdp2);
         long nombreLignes = GestionEntity.getMaxId("membre");
-        assertTrue("test",nombreLignes==(nombreLigne+1));
-        System.out.println("nombre de ligne après : "+nombreLignes);
+        assertTrue("test", nombreLignes==(nombreLigne+1));
+        System.out.println("Nombre de ligne après : "+nombreLignes);
         
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
