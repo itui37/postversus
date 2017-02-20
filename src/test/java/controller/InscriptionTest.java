@@ -61,6 +61,7 @@ public class InscriptionTest {
         String mdp2 = "lion";
         Inscription.inscription(nom, prenom, dateNaissance, sexe, mail, mdp1, mdp2);
         long nombreLignes = GestionEntity.getMaxId("membre");
+        assertTrue("test",nombreLignes==(nombreLigne+1));
         System.out.println("nombre de ligne après : "+nombreLignes);
         
         // TODO review the generated test code and remove the default call to fail.
